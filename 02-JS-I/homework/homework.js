@@ -41,7 +41,7 @@ function suma(x, y) {
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  return y - x;
+  return x - y;
 }
 
 function multiplica(x, y) {
@@ -199,7 +199,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "Hola " + nombre
+  return "Hola " + nombre + "!"
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -212,14 +212,14 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  return Math.pow(lado,4)
+  return (lado * 4)
 }
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
- return Math.pow(base * altura,2)
+ return ((base * altura) / 2)
 }
 
 
@@ -237,11 +237,13 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra.length >= 2 ) {
-    return "Dato incorrecto"
-  } else if (letra === "a", "A", "e", "E", "i", "I", "u", "U") {
-      return "Es vocal"
-  } else { "Dato incorrecto"}
+  if (letra === "a" || letra === "A" || letra === "e" || letra === "E" || letra === "i" ||
+      letra === "I" || letra === "o" || letra === "O" || letra === "u" || letra === "U")
+   {
+    return "Es vocal"
+  } else if (letra.length > 1 ) {
+      return "Dato incorrecto"
+  } else { return "Dato incorrecto"}
 }
 
 
